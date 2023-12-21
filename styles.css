@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -8,7 +8,7 @@ body{
     background: #0b1522;
 }
 
-.heart{
+.heart {
     height: 150px;
     width: 150px;
     background-color: red;
@@ -18,75 +18,88 @@ body{
     animation: beat 0.5s linear infinite alternate;
 }
 
-.content{
+.content {
     position: absolute;
     margin-bottom: 50px;
     text-align: center;
-
 }
 
-.content h1{
+.content h1,
+.content h2 {
     color: white;
     font-family: helvetica;
 }
 
-.content h2{
-    color: white;
-    font-family: helvetica;
+@keyframes beat {
+    0% {
+        transform: rotate(45deg) scale(1.10);
+    }
+    80% {
+        transform: rotate(45deg) scale(1.0);
+    }
+    100% {
+        transform: rotate(45deg) scale(0.8);
+    }
 }
 
-@keyframes beat{
-     0%{transform: rotate(45deg) scale(1.10);}
-     80%{transform: rotate(45deg) scale(1.0);}
-     100%{transform: rotate(45deg) scale(0.8);}
-}
-
-.heart::before{
+.heart::before,
+.heart::after {
     content: "";
     position: absolute;
     height: 150px;
     width: 150px;
     background: red;
+    border-radius: 50%;
+    box-shadow: 20px 20px 150px #f20044;
+}
+
+.heart::before {
     right: 50%;
-    border-radius: 50%;
-    box-shadow: 20px 20px 150px #f20044;
 }
 
-.heart::after{
-    content: "";
-    position: absolute;
-    height: 150px;
-    width: 150px;
-    background: red;
+.heart::after {
     top: -50%;
-    border-radius: 50%;
-    box-shadow: 20px 20px 150px #f20044;
 }
 
-img{
+img {
     width: 15rem;
 }
 
-.tulileft{
+.tulileft {
     position: absolute;
     left: 5px;
 }
 
-.tuliright{
+.tuliright {
     position: absolute;
     right: 5px;
-    transform:scaleX(-1);
+    transform: scaleX(-1);
 }
 
-.xmas{
+.xmas {
     position: absolute;
     top: 710px;
     left: 50px;
 }
 
-.hoe{
+.hoe {
     position: absolute;
     top: 670px;
     right: 50px;
     height: 15rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .heart {
+        height: 100px;
+        width: 100px;
+    }
+
+    .content {
+        margin-bottom: 30px;
+    }
+
+    img {
+        width: 10rem;
+    }
 }
