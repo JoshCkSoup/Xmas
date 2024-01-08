@@ -5,24 +5,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #0b1522;
+    background: #fb6f92;
 }
 
 .heart {
     height: 150px;
     width: 150px;
     background-color: red;
-    position: relative;
+    position: fixed;
     transform: rotate(45deg);
     box-shadow: -20px 20px 150px #f20044;
     animation: beat 0.5s linear infinite alternate;
 }
 
 .content {
-    position: absolute;
+    position: fixed;
     margin-bottom: 50px;
     text-align: center;
 }
+
 
 .content h1,
 .content h2 {
@@ -76,30 +77,8 @@ img {
     transform: scaleX(-1);
 }
 
-.xmas {
-    position: absolute;
-    top: 710px;
-    left: 50px;
-}
-
-.hoe {
-    position: absolute;
-    top: 670px;
-    right: 50px;
-    height: 15rem;
-}
-
-@media only screen and (max-width: 768px) {
-    .heart {
-        height: 100px;
-        width: 100px;
-    }
-
-    .content {
-        margin-bottom: 30px;
-    }
-
-    img {
-        width: 10rem;
-    }
+.letter {
+    position: relative;
+    top: 12rem;
+    color: white;
 }
